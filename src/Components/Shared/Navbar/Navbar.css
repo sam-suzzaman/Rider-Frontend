@@ -1,0 +1,172 @@
+.nav-wrapper {
+    background-color: var(--theme-bg);
+    box-shadow: 0px 1px 4px var(--light-shadow-color);
+}
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 1200px) {
+    .nav-container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+.nav-container .start-col {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.start-col .hamburger-icon {
+    color: var(--accent-color);
+    margin-right: 10px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    .start-col .hamburger-icon {
+        display: flex;
+    }
+}
+.start-col .hamburger-icon .main-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 1px 1px 4px var(--light-shadow-color);
+    list-style: none;
+    padding: 14px;
+    border-radius: 3px;
+    min-width: 150px;
+}
+
+.start-col .hamburger-icon .main-menu.show {
+    opacity: 1;
+    top: 45px;
+    visibility: visible;
+}
+.start-col .hamburger-icon .main-menu li .menu-link {
+    display: block;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: capitalize;
+    padding: 5px 0;
+}
+.start-col .hamburger-icon .main-menu li:hover .menu-link {
+    color: var(--primary-color);
+}
+
+.start-col .hamburger-icon:hover {
+    opacity: 0.8;
+}
+.start-col .hamburger-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.start-col .rider-brand {
+    color: var(--primary-color);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: calc(1.5rem + 0.35vw);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-container .center-col nav ul.main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+@media screen and (max-width: 800px) {
+    .nav-container .center-col nav ul.main-menu {
+        display: none;
+    }
+}
+.center-col .main-menu .menu-link {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.center-col .main-menu li:hover .menu-link {
+    color: var(--primary-color);
+}
+
+.nav-container .end-col {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.nav-container .end-col .mode-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.nav-container .end-col .mode-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-container .end-col .profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+.end-col .profile img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.end-col .profile .profile-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 1px 1px 4px var(--light-shadow-color);
+    list-style: none;
+    padding: 14px;
+    border-radius: 3px;
+    min-width: 150px;
+}
+.end-col .profile .profile-menu.show {
+    top: 50px;
+    opacity: 1;
+    visibility: visible;
+}
+.end-col .profile .profile-menu li .menu-link {
+    display: block;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: capitalize;
+    padding: 5px 0;
+}
+.end-col .profile .profile-menu li:hover .menu-link {
+    color: var(--primary-color);
+}
