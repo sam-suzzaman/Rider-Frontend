@@ -36,7 +36,7 @@ const Slider_Content = [
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aspernatur hic assumenda explicabo officia? Aspernatur dolores eaque eos vitae voluptatem!",
         btnName: "book now",
         btnLink: "#",
-        bg: slider1,
+        bg: slider3,
     },
 ];
 
