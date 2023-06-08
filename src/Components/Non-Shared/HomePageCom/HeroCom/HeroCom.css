@@ -20,6 +20,9 @@
     min-height: 70vh;
     margin-top: 50px;
     border-radius: 4px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .hero-content {
     width: 100%;
@@ -27,9 +30,60 @@
     text-align: center;
     color: #fff;
 }
+
 .hero-content .title {
     text-transform: capitalize;
     font-weight: 600;
-    margin-bottom: 16px;
-    font-size: 32px;
+    margin-bottom: 28px;
+    font-size: calc(1.5rem + 0.8vw);
+    position: relative;
+    letter-spacing: 1px;
+}
+.hero-content .title::after {
+    content: "";
+    width: calc(30px + 2vw);
+    height: 0;
+    border-bottom: 3px double var(--primary-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-content .subtitle {
+    font-weight: 400;
+    font-size: calc(0.8rem + 0.1vw);
+    line-height: 24px;
+    margin-bottom: 22px;
+}
+
+.rider-btn-1 {
+    text-decoration: none;
+    color: var(--black-color);
+    opacity: 0.9;
+    background-color: var(--secondary-color);
+    padding: 7px calc(20px + 0.8vw);
+    border-radius: 40px;
+    text-transform: uppercase;
+    font-size: calc(0.75rem + 0.12vw);
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.rider-btn-1 .icon {
+    margin-left: 3px;
+}
+.rider-btn-1 .icon svg {
+    width: 14px;
+    height: 14px;
+}
+.rider-btn-1:hover {
+    color: var(--white-color);
+}
+.rider-btn-1:hover .icon {
+    margin-left: 5px;
 }

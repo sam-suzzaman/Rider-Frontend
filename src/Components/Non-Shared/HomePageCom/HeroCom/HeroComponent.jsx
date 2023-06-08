@@ -1,5 +1,6 @@
 import React from "react";
 import "./HeroCom.css";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 // slick Slider
 import "slick-carousel/slick/slick.css";
@@ -53,9 +54,7 @@ const HeroComponent = () => {
         pauseOnHover: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        swipeToSlide: true,
-        swipe: true,
-        easing: "linear",
+        draggable: true,
     };
     return (
         <>
@@ -68,7 +67,7 @@ const HeroComponent = () => {
                                     <div
                                         className="hero-container"
                                         style={{
-                                            backgroundImage: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(${slider.bg})`,
+                                            backgroundImage: `linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(${slider.bg})`,
                                         }}
                                     >
                                         <div className="hero-content">
@@ -78,7 +77,15 @@ const HeroComponent = () => {
                                             <p className="subtitle">
                                                 {slider.subtitle}
                                             </p>
-                                            <a href="#">{slider.btnName}</a>
+                                            <a
+                                                href={slider.btnLink}
+                                                className="rider-btn-1"
+                                            >
+                                                {slider.btnName}
+                                                <span className="icon">
+                                                    <AiOutlineArrowRight />
+                                                </span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
