@@ -1,0 +1,29 @@
+.sec-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .sec-container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+.hero-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 70vh;
+    margin-top: 50px;
+    border-radius: 4px;
+}
+.hero-content {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    color: #fff;
+}
