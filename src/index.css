@@ -6,7 +6,30 @@
     font-family: "Raleway", sans-serif;
 }
 
-:root {
+/* :root {
+    --primary-color: #13c4a3;
+    --secondary-color: #36f1cd;
+    --accent-color: #394032;
+    --neutral-color: #36f1cd;
+    --white-color: white;
+    --black-color: black;
+    --theme-bg: #fff;
+    --light-shadow-color: rgba(0, 0, 0, 0.2);
+    --dark-shadow-color: rgba(0, 0, 0, 0.3);
+} */
+
+[data-theme="rider-dark-theme"] {
+    --primary-color: #13c4a3;
+    --secondary-color: #36f1cd;
+    --accent-color: #fff;
+    /* --neutral-color: #36f1cd; */
+    --white-color: white;
+    --black-color: black;
+    --theme-bg: #181818;
+    --light-shadow-color: rgba(255, 255, 255, 0.2);
+    --dark-shadow-color: rgba(255, 255, 255, 0.3);
+}
+[data-theme="rider-light-theme"] {
     --primary-color: #13c4a3;
     --secondary-color: #36f1cd;
     --accent-color: #394032;
@@ -16,4 +39,8 @@
     --theme-bg: #fff;
     --light-shadow-color: rgba(0, 0, 0, 0.2);
     --dark-shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: var(--theme-bg);
 }

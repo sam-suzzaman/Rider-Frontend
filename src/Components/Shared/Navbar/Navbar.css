@@ -121,10 +121,23 @@
     align-items: center;
     margin-right: 10px;
     cursor: pointer;
+    color: var(--accent-color);
+    transition: none;
+}
+.nav-container .end-col .mode-icon .mode-input {
+    display: none;
+    width: 0;
+    height: 0;
+}
+.nav-container .end-col .mode-icon .mode-label-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .nav-container .end-col .mode-icon svg {
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 .nav-container .end-col .profile {

@@ -15,6 +15,11 @@ const Navbar = () => {
     const profile_menu_btn_ref = useRef();
     const [show_profile_menu, set_show_profile_menu] = useState(false);
 
+    // For Theme Toggler
+    const [rider_theme, set_rider_theme] = useState(
+        localStorage.getItem("rider-theme") || "rider-light-theme"
+    );
+
     // For small device main-menu Handling (Part-II)
     useEffect(() => {
         const outside_close_handler = (e) => {
@@ -23,10 +28,6 @@ const Navbar = () => {
                 !main_menu_btn_ref.current.contains(e.target)
             ) {
                 set_show_main_menu(false);
-                console.log(
-                    "result",
-                    !main_menu_ref.current.contains(e.target)
-                );
             }
         };
 
@@ -58,6 +59,20 @@ const Navbar = () => {
             document.removeEventListener("mousedown", outside_close_handler);
         };
     }, [show_profile_menu]);
+
+    // Theme Toggler Function
+    const toggle_theme_handler = (e) => {
+        if (e.target.checked) {
+            set_rider_theme("rider-dark-theme");
+        } else {
+            set_rider_theme("rider-light-theme");
+        }
+    };
+    useEffect(() => {
+        // setting theme
+        document.querySelector("body").setAttribute("data-theme", rider_theme);
+        localStorage.setItem("rider-theme", rider_theme);
+    }, [rider_theme]);
 
     return (
         <header className="nav-wrapper">
@@ -127,9 +142,23 @@ const Navbar = () => {
                     </nav>
                 </div>
                 <div className="end-col">
-                    <span className="mode-icon">
-                        <LuSunMoon />
-                    </span>
+                    <div className="mode-icon">
+                        <input
+                            className="mode-input"
+                            type="checkbox"
+                            id="mode_toggler"
+                            onChange={toggle_theme_handler}
+                            defaultChecked={rider_theme === "rider-dark-theme"}
+                        />
+                        <label className="mode-label-btn" for="mode_toggler">
+                            {rider_theme === "rider-light-theme" ? (
+                                <LuMoon />
+                            ) : (
+                                <LuSunMoon />
+                            )}
+                        </label>
+                    </div>
+
                     <div
                         className="profile"
                         onClick={() =>
