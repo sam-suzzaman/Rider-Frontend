@@ -87,3 +87,24 @@
 .rider-btn-1:hover .icon {
     margin-left: 5px;
 }
+.hero-slider .slick-dots {
+    bottom: 10px;
+    left: 10px;
+    text-align: left;
+}
+.hero-slider .slick-dots li {
+    margin: 0;
+}
+.hero-slider .slick-dots li button {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+.hero-slider .slick-dots li.slick-active button {
+    background-color: #fff;
+}
+.hero-slider .slick-dots li.slick-active button::before {
+    content: "";
+    display: none;
+}

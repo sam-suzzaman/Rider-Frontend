@@ -44,26 +44,24 @@ const Slider_Content = [
 const HeroComponent = () => {
     // Slider Settings
     const settings = {
-        dots: false,
+        dots: true,
         arrows: false,
         infinite: true,
-        speed: 1000,
+        speed: 500,
         autoplaySpeed: 3000,
         autoplay: true,
-        fade: true,
         pauseOnHover: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        draggable: true,
     };
     return (
         <>
             <section>
-                <div className="sec-container">
+                <div className="sec-container hero-slider">
                     <Slider {...settings}>
                         {Slider_Content?.map((slider) => {
                             return (
-                                <div>
+                                <div key={slider._id}>
                                     <div
                                         className="hero-container"
                                         style={{
