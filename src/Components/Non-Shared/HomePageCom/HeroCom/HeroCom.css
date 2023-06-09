@@ -1,16 +1,3 @@
-.sec-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-@media screen and (max-width: 1200px) {
-    .sec-container {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
-}
-
 .hero-container {
     width: 100%;
     display: flex;
@@ -57,7 +44,7 @@
     margin-bottom: 22px;
 }
 
-.rider-btn-1 {
+.hero-btn {
     text-decoration: none;
     color: var(--black-color);
     opacity: 0.9;
@@ -74,19 +61,21 @@
     justify-content: center;
     align-items: center;
 }
-.rider-btn-1 .icon {
+.hero-btn .icon {
     margin-left: 3px;
 }
-.rider-btn-1 .icon svg {
+.hero-btn .icon svg {
     width: 14px;
     height: 14px;
 }
-.rider-btn-1:hover {
+.hero-btn:hover {
     color: var(--white-color);
 }
-.rider-btn-1:hover .icon {
-    margin-left: 5px;
+.hero-btn:hover .icon {
+    margin-left: 7px;
 }
+
+/* Slider's Dot style css */
 .hero-slider .slick-dots {
     bottom: 10px;
     left: 10px;

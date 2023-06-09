@@ -151,7 +151,10 @@ const Navbar = () => {
                             onChange={toggle_theme_handler}
                             defaultChecked={rider_theme === "rider-dark-theme"}
                         />
-                        <label className="mode-label-btn" for="mode_toggler">
+                        <label
+                            className="mode-label-btn"
+                            htmlFor="mode_toggler"
+                        >
                             {rider_theme === "rider-light-theme" ? (
                                 <LuMoon />
                             ) : (

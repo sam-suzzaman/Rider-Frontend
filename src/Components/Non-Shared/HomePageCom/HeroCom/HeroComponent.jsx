@@ -77,7 +77,7 @@ const HeroComponent = () => {
                                             </p>
                                             <a
                                                 href={slider.btnLink}
-                                                className="rider-btn-1"
+                                                className="hero-btn"
                                             >
                                                 {slider.btnName}
                                                 <span className="icon">

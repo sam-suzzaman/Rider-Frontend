@@ -44,3 +44,17 @@
 body {
     background-color: var(--theme-bg);
 }
+
+/* Common CSS */
+.sec-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .sec-container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
