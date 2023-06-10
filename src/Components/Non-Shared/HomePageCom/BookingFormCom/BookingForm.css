@@ -1,7 +1,7 @@
 .booking-form-wrapper {
     margin-top: 100px;
     margin-bottom: 100px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 80%, 80% 80%, 0 100%);
 }
 @media screen and (max-width: 450px) {
@@ -63,7 +63,7 @@
     width: 20px;
     height: 20px;
 }
-.form-container .input-group .input {
+.form-container .input-group .input-field .input {
     border: none;
     outline: none;
     padding: 5px 10px;
@@ -73,14 +73,16 @@
     color: var(--black-color);
     background-color: transparent;
     width: 100%;
+    min-width: 150px;
+    max-width: 200px;
 }
 
 .form-container .submit-btn {
     padding: 8px 25px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--secondary-color);
     outline: none;
     border-radius: 4px;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     cursor: pointer;
     text-transform: capitalize;
     font-weight: 500;
