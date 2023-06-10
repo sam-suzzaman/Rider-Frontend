@@ -1,0 +1,166 @@
+.available-bike-wrapper {
+    margin-top: 50px;
+    padding: 50px 0;
+}
+[data-theme="rider-dark-theme"] .available-bike-wrapper {
+    background-color: #2d2d2d;
+}
+[data-theme="rider-light-theme"] .available-bike-wrapper {
+    background-color: #f0f0f0;
+}
+
+.available-bike-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+@media screen and (min-width: 650px) and (max-width: 900px) {
+    .available-bike-container {
+        grid-column-gap: 15px;
+        grid-row-gap: 30px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .available-bike-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 15px;
+        grid-row-gap: 30px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .available-bike-container {
+        grid-template-columns: 1fr;
+    }
+}
+.available-bike-container .available-bike-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 3px 3px 8px var(--light-shadow-color);
+}
+.available-bike-container .available-bike-col:hover {
+    box-shadow: 3px 3px 8px var(--dark-shadow-color);
+}
+.available-bike-col .img-container {
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+}
+
+.available-bike-col .img-container img {
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.available-bike-col .rating {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 3px 6px;
+    border-radius: 4px;
+    color: var(--secondary-color);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: none;
+    opacity: 0;
+}
+.available-bike-col:hover .rating {
+    visibility: visible;
+    opacity: 1;
+}
+.available-bike-col .rating .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2px;
+}
+.available-bike-col .rating .icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+.available-bike-col .content {
+    margin-top: 18px;
+    background-color: var(--bg-theme-color);
+    padding: 0 8px;
+}
+
+.available-bike-col .content .title {
+    color: var(--accent-color);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.available-bike-col .content .info {
+    color: var(--accent-color);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.available-bike-col .content .info .fancy {
+    color: var(--primary-color);
+}
+.available-bike-col .content .price {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+}
+
+.available-bike-col .content .price .fancy {
+    color: var(--primary-color);
+    margin-left: 2px;
+}
+
+.available-bike-col .btn-container {
+    width: 100%;
+    background: var(--primary-color);
+    padding: 8px 0;
+    text-align: center;
+}
+.available-bike-col .btn-container .bike-btn {
+    width: 100%;
+    text-decoration: none;
+    color: var(--white-color);
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.available-bike-col .btn-container:hover {
+    background-color: var(--secondary-color);
+}
+.available-bike-col .btn-container:hover .bike-btn {
+    color: var(--black-color);
+}
+
+.available-bike-col .btn-container .bike-btn .icon {
+    justify-content: center;
+    align-items: center;
+    margin-left: -3px;
+    display: inline-flex;
+    opacity: 0;
+    visibility: hidden;
+}
+.available-bike-col .btn-container:hover .bike-btn .icon {
+    margin-left: 6px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.available-bike-col .btn-container .bike-btn .icon svg {
+    width: 20px;
+    height: 20px;
+}
