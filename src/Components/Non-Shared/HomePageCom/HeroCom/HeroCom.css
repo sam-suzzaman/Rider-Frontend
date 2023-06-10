@@ -97,3 +97,12 @@
     content: "";
     display: none;
 }
+.hero-slider .slick-dots li.slick-active button::before {
+    content: "";
+    display: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    opacity: 0;
+    display: none;
+}

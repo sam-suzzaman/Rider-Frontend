@@ -87,13 +87,14 @@
     text-transform: capitalize;
     font-weight: 500;
     font-size: 14px;
-    color: var(--white-color);
+    color: var(--black-color);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .form-container .submit-btn:hover {
     background-color: var(--black-color);
+    color: var(--white-color);
 }
 
 .form-container .submit-btn .search_icon {
