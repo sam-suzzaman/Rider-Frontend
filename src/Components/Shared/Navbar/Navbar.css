@@ -1,6 +1,9 @@
 .nav-wrapper {
     background-color: var(--theme-bg);
     box-shadow: 0px 1px 4px var(--light-shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 .nav-container {
     width: 100%;

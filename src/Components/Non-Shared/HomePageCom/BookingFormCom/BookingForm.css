@@ -10,16 +10,9 @@
     }
 }
 .booking-form-container {
-    padding: 50px 0 100px;
+    padding: 50px 0 140px;
 }
-.sec-title {
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--white-color);
-    letter-spacing: 1px;
-    font-size: calc(1.2rem + 0.7vw);
-    font-weight: 700;
-}
+
 .form-container {
     margin-top: 50px;
     display: flex;
@@ -53,12 +46,7 @@
     color: var(--white-color);
     width: 100%;
 }
-@media screen and (min-width: 440px) {
-    .form-container .input-group .input-field {
-        max-width: 200px;
-        width: 100%;
-    }
-}
+
 .form-container .input-group .input-label svg {
     width: 20px;
     height: 20px;
@@ -73,7 +61,7 @@
     color: var(--black-color);
     background-color: transparent;
     width: 100%;
-    min-width: 150px;
+    min-width: 200px;
     max-width: 200px;
 }
 

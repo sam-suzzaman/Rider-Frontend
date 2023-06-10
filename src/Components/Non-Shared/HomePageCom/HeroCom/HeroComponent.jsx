@@ -49,7 +49,7 @@ const HeroComponent = () => {
         infinite: true,
         speed: 500,
         autoplaySpeed: 3000,
-        autoplay: false,
+        autoplay: true,
         pauseOnHover: true,
         slidesToShow: 1,
         slidesToScroll: 1,

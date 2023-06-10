@@ -1,0 +1,19 @@
+.sec-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    font-size: calc(1.2rem + 0.7vw);
+    font-weight: 700;
+}
+.sec-info {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--accent-color);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 15px;
+}

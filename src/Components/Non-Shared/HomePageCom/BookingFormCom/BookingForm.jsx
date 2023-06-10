@@ -13,6 +13,7 @@ import {
 // flatpicker css link
 import "flatpickr/dist/themes/material_green.css";
 import Flatpickr from "react-flatpickr";
+import SecTitle from "../../../Shared/SecTitle/SecTitle";
 
 const BookingForm = () => {
     const [selected_date, set_selected_date] = useState("");
@@ -21,7 +22,7 @@ const BookingForm = () => {
         <>
             <section className="booking-form-wrapper">
                 <div className="sec-container booking-form-container">
-                    <h3 className="sec-title">search & book</h3>
+                    <SecTitle title="search & book" des="" clr="#fff" />
 
                     <form action="" className="form-container">
                         {/* pickup location */}
