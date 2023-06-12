@@ -18,6 +18,7 @@
 
 .client-col-start {
     padding: 20px 15px;
+    overflow: hidden;
 }
 
 .client-col-start .col {
@@ -106,4 +107,37 @@
     letter-spacing: 1px;
     text-transform: capitalize;
     font-weight: 500;
+}
+
+/* ===== Slick Slider Style ===== */
+
+.client-container .client-col-start .slick-dots {
+    bottom: -40px;
+    left: 0px;
+    text-align: center;
+}
+.client-container .client-col-start .slick-dots li {
+    margin: 0;
+}
+.client-container .client-col-start .slick-dots li button {
+    border: 1px solid var(--accent-color);
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+}
+.client-container .client-col-start .slick-dots li.slick-active button {
+    background-color: var(--accent-color);
+}
+.client-container .client-col-start .slick-dots li button::before {
+    content: "";
+    display: none;
+}
+.client-container .client-col-start .slick-dots li.slick-active button::before {
+    content: "";
+    display: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    opacity: 0;
+    display: none;
 }

@@ -93,7 +93,7 @@
 .hero-slider .slick-dots li.slick-active button {
     background-color: #fff;
 }
-.hero-slider .slick-dots li.slick-active button::before {
+.hero-slider .slick-dots li button::before {
     content: "";
     display: none;
 }

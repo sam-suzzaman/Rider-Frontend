@@ -2,6 +2,10 @@ import React from "react";
 import "./OurClients.css";
 import SecTitle from "../../../Shared/SecTitle/SecTitle";
 import { LuQuote } from "react-icons/lu";
+// slick Slider
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 // Testimonail Data
 const TestimonialData = [
@@ -42,6 +46,18 @@ const TestimonialData = [
     },
 ];
 const OurClients = () => {
+    // Slider Settings
+    const settings = {
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        autoplaySpeed: 3000,
+        autoplay: true,
+        pauseOnHover: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
     return (
         <section className="our-client-wrapper">
             <div className="sec-container">
@@ -52,7 +68,30 @@ const OurClients = () => {
 
                 <div className="client-container">
                     <div className="client-col-start">
-                        this is slider section to add slider
+                        <Slider {...settings}>
+                            {TestimonialData?.map((t) => {
+                                return (
+                                    <div className="col" key={t._id}>
+                                        <div className="quote-icon">
+                                            <LuQuote />
+                                        </div>
+                                        <div className="testimonial-container">
+                                            <div className="quote">
+                                                {t.comment}
+                                            </div>
+                                            <div className="author">
+                                                <h3 className="name">
+                                                    {t.author_name}
+                                                </h3>
+                                                <div className="info">
+                                                    {t.author_info}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </Slider>
                     </div>
                     <div className="client-col-end">
                         <div className="col-1 info-card">
