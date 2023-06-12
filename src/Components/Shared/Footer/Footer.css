@@ -31,7 +31,11 @@ footer {
     margin-top: 16px;
     padding: 0 20px 0 0;
 }
-
+@media screen and(max-width:400px) {
+    .footer-container .f-col-1 .info {
+        max-width: none;
+    }
+}
 .footer-container .header {
     font-weight: 600;
     font-size: 17px;
