@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { FaBars } from "react-icons/fa";
 import { LuSunMoon, LuMoon } from "react-icons/lu";
 import profile from "../../../assets/profile.png";
+import Logo from "../Logo/Logo";
 
 const Navbar = () => {
     // For Small device main-menu Handling (Part-I)
@@ -112,9 +113,8 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
-                    <a href="#" className="rider-brand">
-                        rider
-                    </a>
+                    {/* logo */}
+                    <Logo />
                 </div>
                 <div className="center-col">
                     <nav>

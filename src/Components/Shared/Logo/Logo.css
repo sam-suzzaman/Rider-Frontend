@@ -1,0 +1,8 @@
+.rider-brand {
+    color: var(--primary-color);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: calc(1.5rem + 0.35vw);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
