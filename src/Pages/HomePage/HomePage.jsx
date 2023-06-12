@@ -4,6 +4,7 @@ import BookingForm from "../../Components/Non-Shared/HomePageCom/BookingFormCom/
 import HowWorks from "../../Components/Non-Shared/HomePageCom/HowItWorks/HowWorks";
 import WhyChooseUs from "../../Components/Non-Shared/HomePageCom/WhyChooseUs/WhyChooseUs";
 import AvailableBikes from "../../Components/Non-Shared/HomePageCom/AvailableBikes/AvailableBikes";
+import OurClients from "../../Components/Non-Shared/HomePageCom/OurClients/OurClients";
 
 const HomePage = () => {
     return (
@@ -13,6 +14,7 @@ const HomePage = () => {
             <HowWorks />
             <WhyChooseUs />
             <AvailableBikes />
+            <OurClients />
         </>
     );
 };

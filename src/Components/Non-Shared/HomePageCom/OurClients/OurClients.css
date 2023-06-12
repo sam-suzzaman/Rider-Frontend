@@ -1,0 +1,109 @@
+.our-client-wrapper {
+    margin: 100px 0;
+}
+
+.client-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    margin-top: 50px;
+}
+@media screen and (max-width: 800px) {
+    .client-container {
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 30px;
+    }
+}
+
+.client-col-start {
+    padding: 20px 15px;
+}
+
+.client-col-start .col {
+    display: flex;
+    justify-content: flex-start;
+}
+.client-col-start .quote-icon {
+    margin-right: 10px;
+}
+.client-col-start .quote-icon svg {
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    color: var(--accent-color);
+}
+
+.client-col-start .testimonial-container .quote {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--accent-color);
+    text-align: justify;
+}
+.client-col-start .testimonial-container .author {
+}
+.client-col-start .testimonial-container .author .name {
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.client-col-start .testimonial-container .author .info {
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--accent-color);
+}
+.client-col-start .rec.rec-dot {
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    box-shadow: rgba(19, 196, 164, 0.8) 0px 0px 1px 1px;
+}
+.client-col-start .rec.rec-dot:hover {
+    background-color: var(--primary-color);
+}
+.client-col-start .rec.rec-dot.rec-dot_active {
+    box-shadow: rgba(19, 196, 164, 0.8) 0px 0px 1px 1px;
+    width: 7px;
+    height: 7px;
+    background-color: var(--primary-color);
+}
+
+/* ===================================== */
+
+.client-container .client-col-end {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding: 20px 15px;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 400px) {
+    .client-container .client-col-end {
+        grid-template-columns: 1fr;
+    }
+}
+
+.client-col-end .info-card {
+    background-color: var(--primary-color);
+    text-align: center;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 2px 2px 4px var(--dark-shadow-color);
+}
+.client-col-end .info-card .value {
+    font-size: calc(14px + 1vw);
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #fff;
+}
+.client-col-end .info-card .text {
+    font-size: calc(12px + 0.5vw);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
