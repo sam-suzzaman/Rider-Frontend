@@ -1,7 +1,8 @@
 import React from "react";
+import "./Footer.css"
 
 const Footer = () => {
-    return <div>all copyrights reserved-2023</div>;
+    return <footer>all copyrights reserved-2023</footer>;
 };
 
 export default Footer;
