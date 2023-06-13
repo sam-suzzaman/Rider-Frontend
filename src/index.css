@@ -6,7 +6,7 @@
     font-family: "Raleway", sans-serif;
 }
 
-/* :root {
+:root {
     --primary-color: #13c4a3;
     --secondary-color: #36f1cd;
     --accent-color: #394032;
@@ -16,7 +16,7 @@
     --theme-bg: #fff;
     --light-shadow-color: rgba(0, 0, 0, 0.2);
     --dark-shadow-color: rgba(0, 0, 0, 0.3);
-} */
+}
 
 [data-theme="rider-dark-theme"] {
     --primary-color: #13c4a3;
