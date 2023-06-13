@@ -2,6 +2,8 @@ import React from "react";
 import "./SignupPage.css";
 import formBG from "../../../assets/formBG.jpg";
 import Logo from "../../../Components/Shared/Logo/Logo";
+import { FcGoogle } from "react-icons/fc";
+import { AiFillFacebook } from "react-icons/ai";
 
 const SignupPage = () => {
     return (
@@ -92,6 +94,29 @@ const SignupPage = () => {
                                 </button>
                             </div>
                         </form>
+                        <div className="form-footer">
+                            <p className="info">
+                                already have an account{" "}
+                                <a href="#" className="link">
+                                    Sign-in
+                                </a>
+                            </p>
+                            <div className="form-divider">OR</div>
+                            <div className="social-btn-container">
+                                <button className="btn">
+                                    <FcGoogle />{" "}
+                                    <span className="text">
+                                        sign up with google
+                                    </span>
+                                </button>
+                                <button className="btn">
+                                    <AiFillFacebook />{" "}
+                                    <span className="text">
+                                        sign up with facebook
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -8,7 +8,6 @@
     background-position: bottom right;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 30px 0;
 }
 
 .sign-form-container {
@@ -96,5 +95,76 @@
 .sign-form-container form .submit-btn:hover {
     background-color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
+    color: var(--black-color);
+}
+
+.sign-form-container .form-footer .info {
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: capitalize;
+    color: var(--black-color);
+}
+.sign-form-container .form-footer .info .link {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: none;
+}
+.sign-form-container .form-footer .info .link:hover {
+    text-decoration: underline;
+}
+.sign-form-container .form-divider {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: #282828;
+    margin: 25px 0;
+}
+.sign-form-container .form-divider::before,
+.sign-form-container .form-divider::after {
+    content: "";
+    height: 1px;
+    background-color: silver;
+    flex-grow: 1;
+}
+.sign-form-container .form-divider::before {
+    margin-right: 10px;
+}
+.sign-form-container .form-divider::after {
+    margin-left: 10px;
+}
+.sign-form-container .form-footer .social-btn-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+.sign-form-container .form-footer .social-btn-container .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
+    padding: 6px 20px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+.sign-form-container .form-footer .social-btn-container .btn svg {
+    width: 18px;
+    height: 18px;
+}
+.sign-form-container .form-footer .social-btn-container .btn .text {
+    margin-left: 3px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.sign-form-container .form-footer .social-btn-container .btn:hover .text {
     color: var(--black-color);
 }
