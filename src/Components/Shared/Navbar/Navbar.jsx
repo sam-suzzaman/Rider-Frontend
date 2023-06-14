@@ -234,6 +234,9 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
+                    <Link to="/Rider-Frontend/signup" className="nav-sign-btn">
+                        sign up
+                    </Link>
                 </div>
             </div>
         </header>

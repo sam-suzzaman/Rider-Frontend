@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 
 // Components
 import Footer from "./Components/Shared/Footer/Footer";
@@ -8,6 +9,7 @@ import Navbar from "./Components/Shared/Navbar/Navbar";
 import HomePage from "./Pages/HomePage/HomePage";
 import SignupPage from "./Pages/AuthenticationPages/SignupPage/SignupPage";
 import SigninPage from "./Pages/AuthenticationPages/SigninPage/SigninPage";
+import { ToastContainer } from "react-toastify";
 
 function App() {
     return (
@@ -19,6 +21,7 @@ function App() {
                 <Route path="/Rider-Frontend/signin" element={<SigninPage />} />
             </Routes>
             <Footer />
+            <ToastContainer />
         </>
     );
 }

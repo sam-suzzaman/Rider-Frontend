@@ -4,8 +4,23 @@ import formBG from "../../../assets/formBG.jpg";
 import Logo from "../../../Components/Shared/Logo/Logo";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillFacebook } from "react-icons/ai";
+import { toast } from "react-toastify";
 
 const SignupPage = () => {
+    const notify = (e) => {
+        e.preventDefault();
+        toast("🦄 Wow so easy!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+        console.log("clicked");
+    };
     return (
         <section>
             <div
@@ -89,7 +104,11 @@ const SignupPage = () => {
                                 </label>
                             </div>
                             <div className="btn-container">
-                                <button className="submit-btn" type="submit">
+                                <button
+                                    className="submit-btn"
+                                    type="submit"
+                                    onClick={notify}
+                                >
                                     sign up
                                 </button>
                             </div>

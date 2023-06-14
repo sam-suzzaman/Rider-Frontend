@@ -180,3 +180,18 @@
 .end-col .profile .profile-menu li:hover .menu-link {
     color: var(--primary-color);
 }
+
+.nav-sign-btn {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: 6px 16px;
+    margin-left: 12px;
+    border-radius: 4px;
+}
+.nav-sign-btn:hover {
+    background-color: var(--black-color);
+}
