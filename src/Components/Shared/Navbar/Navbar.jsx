@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { LuSunMoon, LuMoon } from "react-icons/lu";
 import profile from "../../../assets/profile.png";
 import Logo from "../Logo/Logo";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     // For Small device main-menu Handling (Part-I)
@@ -92,9 +93,12 @@ const Navbar = () => {
                             ref={main_menu_ref}
                         >
                             <li>
-                                <a href="#" className="menu-link">
+                                <Link
+                                    to="/Rider-Frontend"
+                                    className="menu-link"
+                                >
                                     home
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <a href="#" className="menu-link">
@@ -110,6 +114,22 @@ const Navbar = () => {
                                 <a href="#" className="menu-link">
                                     contact
                                 </a>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/Rider-Frontend/signup"
+                                    className="menu-link"
+                                >
+                                    signup
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/Rider-Frontend/signin"
+                                    className="menu-link"
+                                >
+                                    signin
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -120,9 +140,12 @@ const Navbar = () => {
                     <nav>
                         <ul className="main-menu">
                             <li>
-                                <a href="#" className="menu-link">
+                                <Link
+                                    to="/Rider-Frontend"
+                                    className="menu-link"
+                                >
                                     home
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <a href="#" className="menu-link">
@@ -138,6 +161,22 @@ const Navbar = () => {
                                 <a href="#" className="menu-link">
                                     contact
                                 </a>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/Rider-Frontend/signup"
+                                    className="menu-link"
+                                >
+                                    signup
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/Rider-Frontend/signin"
+                                    className="menu-link"
+                                >
+                                    signin
+                                </Link>
                             </li>
                         </ul>
                     </nav>
