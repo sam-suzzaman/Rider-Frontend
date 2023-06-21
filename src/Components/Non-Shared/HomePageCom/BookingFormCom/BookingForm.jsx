@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./BookingForm.css";
 
 // Icons
-import { GrLocation } from "react-icons/gr";
 import { TfiLocationPin } from "react-icons/tfi";
 import {
     AiOutlineCalendar,
@@ -175,15 +174,17 @@ const BookingForm = () => {
                         </div>
 
                         {/* submit button */}
-                        <button className="submit-btn" type="submit">
-                            <label
-                                htmlFor="search_icon"
-                                className="search_icon"
-                            >
-                                <AiOutlineSearch />
-                            </label>{" "}
-                            search
-                        </button>
+                        <div className="submit-btn-container">
+                            <button className="submit-btn" type="submit">
+                                <label
+                                    htmlFor="search_icon"
+                                    className="search_icon"
+                                >
+                                    <AiOutlineSearch />
+                                </label>{" "}
+                                search
+                            </button>
+                        </div>
                     </form>
                 </div>
             </section>

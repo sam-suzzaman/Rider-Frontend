@@ -15,20 +15,30 @@
 
 .form-container {
     margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 30px;
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 1080px) {
     .form-container {
-        flex-wrap: nowrap;
-        flex-direction: column;
-        align-items: start;
-        justify-content: flex-start;
+        grid-template-columns: repeat(3, auto);
     }
 }
+@media screen and (max-width: 750px) {
+    .form-container {
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 25px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .form-container {
+        grid-template-columns: minmax(auto, 300px);
+        grid-gap: 25px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .form-container .input-group .input-title {
     font-weight: 600;
     font-size: 12px;
@@ -61,8 +71,12 @@
     color: var(--black-color);
     background-color: transparent;
     width: 100%;
-    min-width: 200px;
     max-width: 200px;
+}
+.form-container .submit-btn-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .form-container .submit-btn {
@@ -76,7 +90,7 @@
     font-weight: 500;
     font-size: 14px;
     color: var(--black-color);
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
