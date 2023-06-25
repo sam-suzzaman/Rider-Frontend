@@ -101,9 +101,12 @@ const Navbar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <a href="#" className="menu-link">
+                                <Link
+                                    to="/Rider-Frontend/booking-page"
+                                    className="menu-link"
+                                >
                                     booking
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <a href="#" className="menu-link">
@@ -148,9 +151,12 @@ const Navbar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <a href="#" className="menu-link">
+                                <Link
+                                    to="/Rider-Frontend/booking-page"
+                                    className="menu-link"
+                                >
                                     booking
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <a href="#" className="menu-link">

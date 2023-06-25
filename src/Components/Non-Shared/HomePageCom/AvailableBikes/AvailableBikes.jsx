@@ -43,7 +43,7 @@ const AvailableBikes = () => {
                                     </h5>
                                 </div>
                                 <div className="btn-container">
-                                    <a href="#" className="bike-btn">
+                                    <a href="" className="bike-btn">
                                         book now{" "}
                                         <span className="icon">
                                             <AiOutlineShoppingCart />

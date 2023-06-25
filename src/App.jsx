@@ -10,6 +10,7 @@ import HomePage from "./Pages/HomePage/HomePage";
 import SignupPage from "./Pages/AuthenticationPages/SignupPage/SignupPage";
 import SigninPage from "./Pages/AuthenticationPages/SigninPage/SigninPage";
 import { ToastContainer } from "react-toastify";
+import BookingPage from "./Pages/BookingPage/BookingPage";
 
 function App() {
     return (
@@ -17,6 +18,10 @@ function App() {
             <Navbar />
             <Routes>
                 <Route path="/Rider-Frontend" element={<HomePage />} />
+                <Route
+                    path="/Rider-Frontend/booking-page"
+                    element={<BookingPage />}
+                />
                 <Route path="/Rider-Frontend/signup" element={<SignupPage />} />
                 <Route path="/Rider-Frontend/signin" element={<SigninPage />} />
             </Routes>
