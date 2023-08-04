@@ -5,22 +5,43 @@ import Logo from "../../../Components/Shared/Logo/Logo";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillFacebook } from "react-icons/ai";
 import { toast } from "react-toastify";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignupPage = () => {
-    const notify = (e) => {
-        e.preventDefault();
-        toast("🦄 Wow so easy!", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-        });
-        console.log("clicked");
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors },
+    } = useForm();
+    const navigate = useNavigate();
+
+    const registerHandler = async (data) => {
+        const { username, email, password, confirmPassword } = data;
+        if (password === confirmPassword) {
+            const user = { username, email, password };
+
+            // posting
+            try {
+                const response = await axios.post(
+                    "https://by-cycle-rider.vercel.app/user/signup",
+                    user
+                );
+                console.log(response);
+                toast.success("Successfully Registered");
+                navigate("/Rider-Frontend/signin");
+            } catch (error) {
+                console.log(error);
+                toast.warn("Something Wrong");
+            }
+        } else {
+            toast.warn("Both password not matched!!!");
+            return;
+        }
     };
+
     return (
         <section>
             <div
@@ -33,7 +54,11 @@ const SignupPage = () => {
                             <Logo />
                             <h3 className="title">! signUp now !</h3>
                         </div>
-                        <form action="">
+                        <form
+                            onSubmit={handleSubmit(registerHandler)}
+                            autoComplete="off"
+                            noValidate
+                        >
                             {/* Username */}
                             <div className="input-group">
                                 <label
@@ -47,9 +72,25 @@ const SignupPage = () => {
                                     className="rider-input"
                                     name="username"
                                     placeholder="Type here"
+                                    {...register("username", {
+                                        required: {
+                                            value: true,
+                                            message: "Username is required",
+                                        },
+                                        minLength: {
+                                            value: 3,
+                                            message:
+                                                "Username must be (3)chars at least",
+                                        },
+                                        maxLength: {
+                                            value: 20,
+                                            message:
+                                                "Username can be (20) chars max",
+                                        },
+                                    })}
                                 />
                                 <label className="error-label">
-                                    something went wrong
+                                    {errors.username?.message}
                                 </label>
                             </div>
                             {/* email */}
@@ -62,9 +103,20 @@ const SignupPage = () => {
                                     className="rider-input"
                                     name="email"
                                     placeholder="Type here"
+                                    {...register("email", {
+                                        required: {
+                                            value: true,
+                                            message: "Email is required",
+                                        },
+                                        pattern: {
+                                            value: /^[a-zA-Z0-9._%+-]*[a-zA-Z][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                                            message:
+                                                "enter a valid email address",
+                                        },
+                                    })}
                                 />
                                 <label className="error-label">
-                                    something went wrong
+                                    {errors.email?.message}
                                 </label>
                             </div>
                             {/* password */}
@@ -80,9 +132,30 @@ const SignupPage = () => {
                                     className="rider-input"
                                     name="password"
                                     placeholder="Type here"
+                                    {...register("password", {
+                                        required: {
+                                            value: true,
+                                            message: "password is required",
+                                        },
+                                        pattern: {
+                                            value: /^(?=.*\d)(?=.*[A-Z])(?=.*[^a-zA-Z\d]).{8,}$/,
+                                            message:
+                                                "combination of number,uppercase letter and a special character",
+                                        },
+                                        maxLength: {
+                                            value: 25,
+                                            message:
+                                                "password is too long (max 25chars)",
+                                        },
+                                        minLength: {
+                                            value: 8,
+                                            message:
+                                                "password is too short (atleast 8chars)",
+                                        },
+                                    })}
                                 />
                                 <label className="error-label">
-                                    something went wrong
+                                    {errors.password?.message}
                                 </label>
                             </div>
                             {/* confirm-password */}
@@ -98,17 +171,35 @@ const SignupPage = () => {
                                     className="rider-input"
                                     name="Cpassword"
                                     placeholder="Type here"
+                                    {...register("confirmPassword", {
+                                        required: {
+                                            value: true,
+                                            message:
+                                                "confirm password is required",
+                                        },
+                                        pattern: {
+                                            value: /^(?=.*\d)(?=.*[A-Z])(?=.*[^a-zA-Z\d]).{8,}$/,
+                                            message:
+                                                "combination of number,uppercase letter and a special character",
+                                        },
+                                        maxLength: {
+                                            value: 25,
+                                            message:
+                                                "password is too long (max 25chars)",
+                                        },
+                                        minLength: {
+                                            value: 8,
+                                            message:
+                                                "password is too short (atleast 8chars)",
+                                        },
+                                    })}
                                 />
                                 <label className="error-label">
-                                    something went wrong
+                                    {errors.confirmPassword?.message}
                                 </label>
                             </div>
                             <div className="btn-container">
-                                <button
-                                    className="submit-btn"
-                                    type="submit"
-                                    onClick={notify}
-                                >
+                                <button className="submit-btn" type="submit">
                                     sign up
                                 </button>
                             </div>
@@ -116,11 +207,14 @@ const SignupPage = () => {
                         <div className="form-footer">
                             <p className="info">
                                 already have an account{" "}
-                                <a href="#" className="link">
+                                <Link
+                                    to="/Rider-Frontend/signin"
+                                    className="link"
+                                >
                                     Sign-in
-                                </a>
+                                </Link>
                             </p>
-                            <div className="form-divider">OR</div>
+                            {/* <div className="form-divider">OR</div>
                             <div className="social-btn-container">
                                 <button className="btn">
                                     <FcGoogle />{" "}
@@ -134,7 +228,7 @@ const SignupPage = () => {
                                         sign up with facebook
                                     </span>
                                 </button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

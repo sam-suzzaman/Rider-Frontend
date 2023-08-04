@@ -1,0 +1,94 @@
+.booking-page-wrapper {
+    padding: 50px 0;
+}
+.available-cycle-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.available-cycle-content .search-text {
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 80%;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 400px) {
+    .available-cycle-content .search-text {
+        text-align: center;
+    }
+}
+.available-cycle-content .search-text .fancy {
+    color: var(--primary-color);
+    margin-left: 3px;
+    margin-right: 3px;
+    text-transform: uppercase;
+}
+.available-cycle-content .cycle-card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    justify-content: space-between;
+}
+@media screen and (max-width: 1050px) {
+    .available-cycle-content .cycle-card-row {
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .available-cycle-content .cycle-card-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 400px) {
+    .available-cycle-content .cycle-card-row {
+        grid-template-columns: 1fr;
+    }
+}
+.available-cycle-content .cycle-card {
+    box-shadow: 0 3px 6px var(--light-shadow-color);
+    padding: 16px 14px;
+    border-radius: 4px;
+}
+.available-cycle-content .cycle-card .thumb img {
+    width: 100%;
+}
+.available-cycle-content .cycle-card .title {
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    margin-top: 10px;
+    padding: 0 6px;
+}
+
+.available-cycle-content .cycle-card .title .price {
+    padding: 4px 10px;
+    background-color: var(--accent-color);
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 16px;
+}
+.available-cycle-content .cycle-card .des {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.available-cycle-content .cycle-card .book-btn {
+    padding: 4px 20px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-size: 14px;
+    color: var(--white-color);
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.available-cycle-content .cycle-card .book-btn:hover {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}

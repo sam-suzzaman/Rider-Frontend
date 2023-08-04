@@ -42,14 +42,14 @@ const AvailableBikes = () => {
                                         </span>
                                     </h5>
                                 </div>
-                                {/* <div className="btn-container">
+                                <div className="btn-container">
                                     <a href="" className="bike-btn">
-                                        book now{" "}
-                                        <span className="icon">
+                                        see details
+                                        {/* <span className="icon">
                                             <AiOutlineShoppingCart />
-                                        </span>
+                                        </span> */}
                                     </a>
-                                </div> */}
+                                </div>
                             </div>
                         );
                     })}
