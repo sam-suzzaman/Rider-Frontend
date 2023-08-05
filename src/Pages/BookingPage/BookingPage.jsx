@@ -3,6 +3,7 @@ import { bookingContext } from "../../../context/BookingContext";
 import SecTitle from "../../Components/Shared/SecTitle/SecTitle";
 import "./BookingPage.css";
 import cyclePic from "../../assets/bikes/1.jpg";
+import { Link } from "react-router-dom";
 
 const BookingPage = () => {
     const {
@@ -51,9 +52,12 @@ const BookingPage = () => {
                                         Lorem, ipsum dolor sit amet consectetur
                                         adipisicing elit. Iure, officia!
                                     </p>
-                                    <button className="book-btn">
+                                    <Link
+                                        to={`/Rider-Frontend/order/${cycle._id}`}
+                                        className="book-btn"
+                                    >
                                         book now
-                                    </button>
+                                    </Link>
                                 </div>
                             );
                         })}

@@ -10,6 +10,7 @@ const BookingContextProviderWrapper = ({ children }) => {
     const [bookingLocation, setBookingLocation] = useState("");
     const [cycleLoading, setCycleLoading] = useState(true);
     const [cycleError, setCycleError] = useState(false);
+    const [pinLock, setPinLock] = useState("");
 
     const getAvailableBikes = async () => {
         console.log("called fetch cycle");
@@ -71,6 +72,8 @@ const BookingContextProviderWrapper = ({ children }) => {
                 cycleLoading,
                 cycleError,
                 setBookingLocation,
+                pinLock,
+                setPinLock,
             }}
         >
             {children}

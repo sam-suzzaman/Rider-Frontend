@@ -22,6 +22,9 @@ const Navbar = () => {
         localStorage.getItem("rider-theme") || "rider-light-theme"
     );
 
+    // check local storage access-token
+    const accessToken = localStorage.getItem("access-token");
+
     // For small device main-menu Handling (Part-II)
     useEffect(() => {
         const outside_close_handler = (e) => {
@@ -100,14 +103,14 @@ const Navbar = () => {
                                     home
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link
                                     to="/Rider-Frontend/booking-page"
                                     className="menu-link"
                                 >
                                     booking
                                 </Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <a href="#" className="menu-link">
                                     about
@@ -118,22 +121,26 @@ const Navbar = () => {
                                     contact
                                 </a>
                             </li>
-                            <li>
-                                <Link
-                                    to="/Rider-Frontend/signup"
-                                    className="menu-link"
-                                >
-                                    signup
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    to="/Rider-Frontend/signin"
-                                    className="menu-link"
-                                >
-                                    signin
-                                </Link>
-                            </li>
+                            {!accessToken && (
+                                <>
+                                    <li>
+                                        <Link
+                                            to="/Rider-Frontend/signup"
+                                            className="menu-link"
+                                        >
+                                            signup
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            to="/Rider-Frontend/signin"
+                                            className="menu-link"
+                                        >
+                                            signin
+                                        </Link>
+                                    </li>
+                                </>
+                            )}
                         </ul>
                     </div>
                     {/* logo */}
@@ -150,14 +157,14 @@ const Navbar = () => {
                                     home
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link
                                     to="/Rider-Frontend/booking-page"
                                     className="menu-link"
                                 >
                                     booking
                                 </Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <a href="#" className="menu-link">
                                     about
@@ -168,22 +175,26 @@ const Navbar = () => {
                                     contact
                                 </a>
                             </li>
-                            <li>
-                                <Link
-                                    to="/Rider-Frontend/signup"
-                                    className="menu-link"
-                                >
-                                    signup
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    to="/Rider-Frontend/signin"
-                                    className="menu-link"
-                                >
-                                    signin
-                                </Link>
-                            </li>
+                            {!accessToken && (
+                                <>
+                                    <li>
+                                        <Link
+                                            to="/Rider-Frontend/signup"
+                                            className="menu-link"
+                                        >
+                                            signup
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            to="/Rider-Frontend/signin"
+                                            className="menu-link"
+                                        >
+                                            signin
+                                        </Link>
+                                    </li>
+                                </>
+                            )}
                         </ul>
                     </nav>
                 </div>
@@ -234,15 +245,25 @@ const Navbar = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="menu-link">
+                                <a
+                                    onClick={() =>
+                                        localStorage.setItem("access-token", "")
+                                    }
+                                    className="menu-link"
+                                >
                                     logout
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <Link to="/Rider-Frontend/signup" className="nav-sign-btn">
-                        sign up
-                    </Link>
+                    {!accessToken && (
+                        <Link
+                            to="/Rider-Frontend/signup"
+                            className="nav-sign-btn"
+                        >
+                            sign up
+                        </Link>
+                    )}
                 </div>
             </div>
         </header>
