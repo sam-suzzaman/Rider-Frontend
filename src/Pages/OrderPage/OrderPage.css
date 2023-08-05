@@ -8,12 +8,24 @@
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 20px;
 }
+@media screen and (max-width: 600px) {
+    .order-page-wrapper .cycle-container {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+}
 .order-page-wrapper .cycle-container .thumb {
 }
 .order-page-wrapper .cycle-container .thumb img {
     width: 90%;
     padding: 10px;
     box-shadow: 0 6px 8px var(--light-shadow-color);
+}
+@media screen and (max-width: 600px) {
+    .order-page-wrapper .cycle-container .thumb {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .order-page-wrapper .cycle-container .content .title {
